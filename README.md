@@ -21,8 +21,6 @@ During a security incident simulation, sensitive data has been covertly leaked f
 ### Flag Format
 flag{dns_c4n_l34k_5ecrets}
 
-text
-
 ### Tools Recommended
 - Wireshark / tshark
 - Command line utilities: grep, base64
@@ -48,8 +46,6 @@ Your mission is to outsmart Bombardino by peeling back each hidden layer, cracki
 
 ### Flag Format
 flag{n3st3d_st3g0_succ3ss}
-
-text
 
 ### Tools Recommended
 - binwalk
