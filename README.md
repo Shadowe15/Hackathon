@@ -14,7 +14,7 @@ During a security incident simulation, sensitive data has been covertly leaked f
 
 ### Objectives
 - Use Wireshark or similar tools to filter DNS queries.
-- Search for unusual subdomains ending with `.evil.com`.
+- Search for unusual subdomains.
 - Reconstruct the base64-encoded flag from fragmented DNS subdomains.
 - Decode the base64 string to reveal the flag.
 
@@ -39,7 +39,7 @@ Bombardino killed Tralalero and got away, but now he needs help from his allies 
 Your mission is to outsmart Bombardino by peeling back each hidden layer, cracking the password-protected archives, and uncovering the final flag. Just be prepared for some PES-inspired trolling in the image metadata!
 
 ### File Provided
-- `matryoshka.jpg` — A JPEG image with appended password-protected ZIP archives.
+- `Bombardino_crocodilo.jpg` — A JPEG image with appended password-protected ZIP archives.
 
 ### Objectives
 - Identify hidden data inside the image using `binwalk` or similar forensic tools.
@@ -64,12 +64,10 @@ text
 ### DNS Leak
 1. Open the .pcap file in Wireshark.
 2. Filter DNS queries: `dns.flags.response == 0`
-3. Search for domains containing `.evil.com`.
-4. Extract and base64-decode the payload.
+3. Extract and base64-decode the payload.
 
 ### Matryoshka JPG
-1. Analyze image metadata for hints: `exiftool matryoshka.jpg`
-2. Detect embedded files: `binwalk matryoshka.jpg`
-3. Extract files recursively: `binwalk -e matryoshka.jpg`
-4. Unzip password-protected archives using discovered password.
-k
+1. Analyze image metadata for hints: `exiftool Bombardino_crocodilo.jpg`
+2. Detect embedded files: `binwalk Bombardino_crocodilo.jpg`
+3. Unzip password-protected archives using discovered password.
+
